@@ -1,0 +1,32 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro matriz1[2][2], matriz2[2][2], maior = -10000
+
+		para(inteiro i=0; i<2; i++){
+			para(inteiro j=0; j<2; j++){
+				escreva("Insira um número na posição [", i+1,"][", j+1, "]: ")
+				leia(matriz1[i][j])
+
+				se(matriz1[i][j]>maior){
+					maior = matriz1[i][j]
+				}				
+			}
+		}
+
+		para(inteiro i=0; i<2; i++){
+			para(inteiro j=0;  j<2; j++){
+				matriz2[i][j] = matriz1[i][j]*maior
+			}
+		}
+
+		//saida
+		para(inteiro i=0; i<2; i++){
+			para(inteiro j=0; j<2; j++){
+				escreva("linha ",i+1,": ", matriz2[i][j],"\n")
+			}
+		}
+		
+	}
+}
